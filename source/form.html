@@ -51,11 +51,11 @@
           <ul class="order-form__list">
             <li>
               <input class="visually-hidden order-form__input order-form__input--radio" type="radio" id="interior" name="type" value="for-interior" checked>
-              <label for="interior">Аксессуар для интерьера</label>
+              <label class="order-form__label" for="interior">Аксессуар для интерьера</label>
             </li>
             <li>
               <input class="visually-hidden order-form__input order-form__input--radio" type="radio" id="toy" name="type" value="toy">
-              <label for="toy">Детская игрушка</label>
+              <label class="order-form__label" for="toy">Детская игрушка</label>
             </li>
           </ul>
         </fieldset>
@@ -64,27 +64,27 @@
           <ul class="order-form__list">
             <li>
               <input class="visually-hidden order-form__input order-form__input--checkbox" type="checkbox" id="white" name="white" checked>
-              <label for="white">Белый</label>
+              <label class="order-form__label" for="white">Белый</label>
             </li>
             <li>
               <input class="visually-hidden order-form__input order-form__input--checkbox" type="checkbox" id="gray" name="gray" checked>
-              <label for="gray">Серый</label>
+              <label class="order-form__label" for="gray">Серый</label>
             </li>
             <li>
               <input class="visually-hidden order-form__input order-form__input--checkbox" type="checkbox" id="tiffany" name="tiffany">
-              <label for="tiffany">«Тиффани»</label>
+              <label class="order-form__label" for="tiffany">«Тиффани»</label>
             </li>
             <li>
               <input class="visually-hidden order-form__input order-form__input--checkbox" type="checkbox" id="black" name="black">
-              <label for="black">Черный</label>
+              <label class="order-form__label" for="black">Черный</label>
             </li>
             <li>
               <input class="visually-hidden order-form__input order-form__input--checkbox" type="checkbox" id="pink" name="pink">
-              <label for="pink">Розовый</label>
+              <label class="order-form__label" for="pink">Розовый</label>
             </li>
             <li>
               <input class="visually-hidden order-form__input order-form__input--checkbox" type="checkbox" id="orange" name="orange">
-              <label for="orange">Оранжевый</label>
+              <label class="order-form__label" for="orange">Оранжевый</label>
             </li>
           </ul>
         </fieldset>
@@ -100,15 +100,11 @@
             <input class="order-form__input" id="middle-name" name="middle-name" type="text" placeholder="Отчество, если желаете">
           </label>
         </fieldset>
-        <fieldset class="order-form__fieldset order-form__fieldset--phone">
-          <legend class="order-form__legend">тел</legend>
-          <label class="order-form__label visually-hidden">тел
+        <fieldset class="order-form__fieldset order-form__fieldset--contact">
+          <label class="order-form__label order-form__label--phone">тел
             <input type="tel" class="order-form__input order-form__input--phone" name="phone" placeholder="+7 ХХХ ХХ ХХ*">
           </label>
-        </fieldset>
-        <fieldset class="order-form__fieldset order-form__fieldset--email">
-          <legend class="order-form__legend">E-mail</legend>
-          <label class="order-form__label visually-hidden">E-mail
+          <label class="order-form__label order-form__label--email">E-mail
             <input class="order-form__input order-form__input--email" type="email" name="email" placeholder="Ваш Email*">
           </label>
         </fieldset>
@@ -118,7 +114,7 @@
             <textarea class="order-form__input order-form__input--text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </label>
         </fieldset>
-        <p>*Поля обязательны для заполнения</p>
+        <p class="order-form__remark">*Поля обязательны для заполнения</p>
         <button class="order-form__send button" type="submit">Отправить заказ</button>
       </form>
     </section>
@@ -136,8 +132,8 @@
       </li>
     </ul>
     <div class="page-footer__copyright copyright">
-      <b class="copyright__text">Разработано</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <b class="copyright__text">Разработано</b>
         <img class="copyright__logo" src="http://placehold.it/150x100" alt="Логотип HTML Academy">
       </a>
     </div>
