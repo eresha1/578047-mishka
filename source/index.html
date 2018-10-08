@@ -2,13 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header container">
       <nav class="page-header__nav main-nav">
         <a class="main-nav__logo-link" href="#">
-          <img class="main-nav__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Логотип магазина Мишка">
+          <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="85.589" height="35.034" alt="Логотип магазина Мишка">
         </a>
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
@@ -17,7 +19,7 @@
               <a class="site-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#">Вязание на заказ</a>
+              <a class="site-list__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
           <ul class="main-nav__list user-block">
@@ -38,9 +40,9 @@
       </nav>
     </header>
     <main class="page-main">
-      <div class="page-main__heading">
-        <h1 class="page-main__title">
-          Милые штуки ручной работы для дома
+      <div class="page-main__heading page-main__heading--index container">
+        <h1 class="page-main__title page-main__title--index">
+          Милые штуки ручной <br> работы для дома
         </h1>
       </div>
       <section class="categories">
@@ -58,9 +60,9 @@
           </li>
         </ul>
       </section>
-      <section class="goods-week">
+      <section class="goods-week container">
         <header class="goods-week__header">
-          <h2 class="goods-week__title">Вязаные корзинки</h2>
+          <h2 class="goods-week__title section-title">Вязаные корзинки</h2>
           <span class="goods-week__promo">Товар недели</span>
         </header>
         <div class="goods-week__content">
@@ -69,34 +71,36 @@
           </p>
           <table class="goods-week__characteristic">
             <tr>
-              <td class="goods-week__parameter">Цвет:</td>
-              <td class="goods-week__value">«Тиффани»/серый</td>
+              <td class="goods-week__td goods-week__td--parameter">Цвет:</td>
+              <td class="goods-week__td goods-week__td--value">«Тиффани»/серый</td>
             </tr>
             <tr>
-              <td class="goods-week__parameter">Диаметр:</td>
-              <td class="goods-week__value">25 см</td>
+              <td class="goods-week__td goods-week__td--parameter">Диаметр:</td>
+              <td class="goods-week__td goods-week__td--value">25 см</td>
             </tr>
             <tr>
-              <td class="goods-week__parameter">Высота:</td>
-              <td class="goods-week__value">15 см</td>
+              <td class="goods-week__td goods-week__td--parameter">Высота:</td>
+              <td class="goods-week__td goods-week__td--value">15 см</td>
             </tr>
           </table>
-          <img class="goods-week__image" src="http://placehold.it/150x100" width="150" height="100" alt="Вязаные корзинки">
+          <div class="goods-week__wrapper-image">
+            <img class="goods-week__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+          </div>
           <p class="goods-week__price">Цена: 990 руб.</p>
           <a class="goods-week__order button" href="#">Заказать</a>
         </div>
       </section>
-      <section class="features">
-        <h2 class="features__title">Коротко о нас:</h2>
+      <section class="features container">
+        <h2 class="features__title section-title">Коротко о нас:</h2>
         <ul class="features__list">
           <li class="features__item features__item--eco">
-            <p class="features__describe">Экологически чистые материалы</p>
+            <p class="features__describe">Экологически чистые&nbsp;материалы</p>
           </li>
           <li class="features__item features__item--money">
-            <p class="features__describe">Скандинавский стиль по российской цене</p>
+            <p class="features__describe">Скандинавский стиль по&nbsp;российской цене</p>
           </li>
           <li class="features__item features__item--like">
-            <p class="features__describe">Увеличивает лайки на фотографиях</p>
+            <p class="features__describe">Увеличивает лайки на&nbsp;фотографиях</p>
           </li>
           <li class="features__item features__item--love">
             <p class="features__describe">Связано вручную с любовью и умилением</p>
@@ -105,27 +109,32 @@
             <p class="features__describe">Поддержка отечественного производителя</p>
           </li>
           <li class="features__item features__item--gift">
-            <p class="features__describe">Поставляется в подарочной упаковке</p>
+            <p class="features__describe">Поставляется в подарочной&nbsp;упаковке</p>
           </li>
         </ul>
       </section>
-      <section class="reviews">
-        <h2 class="reviews__title">Отзывы</h2>
+      <section class="reviews container">
+        <h2 class="reviews__title section-title">Отзывы</h2>
         <div class="reviews__list">
           <blockquote class="reviews__item">
             <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
             </p>
-            <cite class="reviews__author-name">Анастасия Красильникова
-              <span class="reviews__email">@misssssiskras</span>
+            <cite class="reviews__author-name">Анастасия Красильникова<br>
+              <span class="reviews__nickname">@misssssiskras</span>
             </cite>
           </blockquote>
-          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__next" type="button">Следующий отзыв</button>
+          <div class="reviews__toggle">
+            <button class="reviews__prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
+            <button class="reviews__next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+          </div>
         </div>
         <a class="reviews__write button" href="#">Написать</a>
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
+
+        <!-- В этом блоке никак не получается сделать, чтобы ничего не прыгало!!! Блоки никак не хотят стоять как надо ( искл. ширину экрана 338 - 366, и то текст переносится не по образцу-->
+
         <dl class="contacts__address">
           <dt class="contacts__parameter">e-mail:</dt>
           <dd class="contacts__value">
@@ -133,16 +142,16 @@
           </dd>
           <dt class="contacts__parameter">адрес:</dt>
           <dd class="contacts__value">
-            <p>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+            <p class="contacts__value-address">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101
             </p>
           </dd>
         </dl>
-        <img class="contacts__map" src="http://placehold.it/150x100" width="150" height="100" alt="Местонахождение на карте">
+        <img class="contacts__map" src="img/map-mobile@1x.jpg" width="322" height="457" alt="Местонахождение на карте">
         <div class="contacts__map-interactive"></div>
         <a class="contacts__write button" href="#">Напишите нам</a>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer container">
       <ul class="page-footer__social social">
         <li class="social__item">
           <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграм</a>
@@ -157,7 +166,9 @@
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <b class="copyright__text">Разработано</b>
-          <img class="copyright__logo" src="http://placehold.it/150x100" alt="Логотип HTML Academy">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+            <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+          </svg>
         </a>
       </div>
     </footer>
