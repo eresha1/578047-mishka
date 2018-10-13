@@ -9,18 +9,159 @@
 }
 
 .main-nav__logo-link {
-  padding: 20px 0 20px;
+  min-width: 86px;
 }
 
-.main-nav__list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
 
 .main-nav__toggle {
   position: absolute;
+  width: 30px;
+  height: 25px;
   top: 30px;
   right: 0;
+}
+
+.main-nav__list {
+  width: 260px;
+  display: block;
+  .reset-list();
+
+  &--hot {
+    display: none;
+  }
+}
+
+.main-nav__link {
+  position: relative;
+  display: flex;
+  padding: 30px 20px 30px 45px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.main-nav__link > svg {
+  position: relative;
+  top: 0;
+  left: -45px;
+}
+
+.main-nav__delivery {
+  display: none;
+}
+
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .main-nav__logo-link {
+    width: 48.5%;
+    order: 1;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 325px;
+
+    &--site {
+      margin-bottom: -40px;
+      order: 3;
+      width: 48.5%;
+      font-size: 15px;
+    }
+
+    &--user {
+      order: 2;
+      width: 51.5%;
+      padding: 30px 0;
+      font-size: 17px;
+    }
+
+    &--hot {
+      display: none;
+    }
+  }
+
+  .main-nav__item {
+    &--site {
+      margin-right: 20px;
+    }
+  }
+
+  .main-nav__link {
+    padding: 0;
+
+    &--search {
+      width: 84px;
+    }
+  }
+
+  .main-nav__icon--search {
+    display: none;
+  }
+
+  .main-nav__link--search > svg {
+    left: 0;
+  }
+
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__delivery {
+    position: absolute;
+    display: block;
+    margin: 0;
+    bottom: -32px;
+    right: 50px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .main-nav__logo-link {
+    width: 149px;
+    order: 2;
+}
+
+  .main-nav__list {
+    font-size: 17px;
+
+    &--site {
+      width: 400px;
+      order: 1;
+      margin-bottom: 0;
+      padding: 30px 0;
+    }
+
+    &--user {
+      width: 350px;
+      order: 3;
+    }
+
+    &--hot {
+      display: flex;
+      width: 350px;
+      order: 4;
+      margin-bottom: -42px;
+      font-size: 15px;
+    }
+  }
+
+
 }

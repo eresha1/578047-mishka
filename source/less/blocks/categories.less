@@ -1,8 +1,11 @@
-.categories__list {
-  margin: 0;
-  padding: 0;
+.categories {
+  background-color: @bg-heading;
+}
 
-  list-style: none;
+.categories__list {
+  .container-min();
+  width: 100%;
+  .reset-list();
 }
 
 .categories__link {
@@ -29,4 +32,27 @@
   display: inline-block;
   width: 110px;
   vertical-align: middle;
+}
+
+@media (min-width: @tablet-width) {
+  .categories {
+    width: auto;
+  }
+
+  .categories__list {
+    .container-middle();
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .categories__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .categories__list {
+    .container-max();
+  }
 }

@@ -1,3 +1,19 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .container-min();
   background-color: @bg-color;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    .container-middle();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    .container-max();
+  }
 }
