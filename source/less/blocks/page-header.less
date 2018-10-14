@@ -1,19 +1,20 @@
 .page-header {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  .container-min();
   background-color: @bg-color;
 }
 
+.page-header__wrapper {
+  position: relative;
+  margin: 0 auto;
+}
+
 @media (min-width: @tablet-width) {
-  .page-header {
+  .page-header__wrapper {
     .container-middle();
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-header {
+  .page-header__wrapper {
     .container-max();
   }
 }

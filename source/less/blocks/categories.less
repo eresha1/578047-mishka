@@ -1,11 +1,21 @@
 .categories {
-  background-color: @bg-heading;
+  background-color: @bg-1;
 }
 
 .categories__list {
-  .container-min();
-  width: 100%;
   .reset-list();
+}
+
+.categories__item {
+  width: 100%;
+
+  &--interior {
+    background-color: #63d1bb;
+  }
+
+  &--toys {
+    background-color: #56c3b2;
+  }
 }
 
 .categories__link {
@@ -18,14 +28,6 @@
   color: #ffffff;
 
   text-decoration: none;
-
-  &--interior {
-    background-color: #63d1bb;
-  }
-
-  &--toys {
-    background-color: #56c3b2;
-  }
 }
 
 .categories__name {
@@ -36,11 +38,10 @@
 
 @media (min-width: @tablet-width) {
   .categories {
-    width: auto;
+    .container-middle();
   }
 
   .categories__list {
-    .container-middle();
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -52,7 +53,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .categories__list {
+  .categories {
     .container-max();
   }
 }

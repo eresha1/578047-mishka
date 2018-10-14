@@ -1,15 +1,17 @@
 .main-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  width: 320px;
+  margin: 0 auto;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
 }
 
 .main-nav__logo-link {
-  min-width: 86px;
+  display: block;
+  width: 86px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0 auto;
 }
 
 
@@ -18,31 +20,35 @@
   width: 30px;
   height: 25px;
   top: 30px;
-  right: 0;
+  right: 30px;
 }
 
 .main-nav__list {
   width: 260px;
-  display: block;
   .reset-list();
+  margin-right: auto;
+  margin-left: auto;
 
   &--hot {
     display: none;
   }
 }
 
-.main-nav__link {
+.main-nav__item {
   position: relative;
-  display: flex;
+}
+
+.main-nav__link {
+  display: block;
   padding: 30px 20px 30px 45px;
   color: #000000;
   text-decoration: none;
 }
 
 .main-nav__link > svg {
-  position: relative;
-  top: 0;
-  left: -45px;
+  position: absolute;
+  top: 30px;
+  left: 0;
 }
 
 .main-nav__delivery {
@@ -52,33 +58,37 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
+    width: 100%;
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0;
   }
 
   .main-nav__logo-link {
-    width: 48.5%;
+    width: 120px;
+    margin-left: 0;
     order: 1;
   }
 
   .main-nav__list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    min-width: 325px;
 
     &--site {
-      margin-bottom: -40px;
-      order: 3;
-      width: 48.5%;
+      position: absolute;
+      margin: 0;
+      bottom: -32px;
+      left: 50px;
+      width: 320px;
       font-size: 15px;
     }
 
     &--user {
+      justify-content: flex-end;
       order: 2;
-      width: 51.5%;
-      padding: 30px 0;
+      width: 348px;
+      margin-right: 0;
       font-size: 17px;
     }
 
@@ -98,15 +108,16 @@
 
     &--search {
       width: 84px;
+      padding: 30px 0;
+    }
+
+    &--basket {
+      padding: 30px 0 30px 45px;
     }
   }
 
   .main-nav__icon--search {
     display: none;
-  }
-
-  .main-nav__link--search > svg {
-    left: 0;
   }
 
 
@@ -128,8 +139,8 @@
 
 @media (min-width: @desktop-width) {
   .main-nav {
+    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
   }
@@ -137,20 +148,19 @@
   .main-nav__logo-link {
     width: 149px;
     order: 2;
-}
+  }
 
   .main-nav__list {
     font-size: 17px;
+    width: 420px;
 
     &--site {
-      width: 400px;
+
       order: 1;
       margin-bottom: 0;
-      padding: 30px 0;
     }
 
     &--user {
-      width: 350px;
       order: 3;
     }
 
@@ -162,6 +172,4 @@
       font-size: 15px;
     }
   }
-
-
 }

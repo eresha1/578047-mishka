@@ -1,6 +1,12 @@
-.page-main-wrapper {
-  background-color: @bg-heading;
-}
+.page-main__wrapper {
+  &--index {
+    background-color: @bg-1;
+  }
+
+  &--inner {
+    background-color: @bg-2;
+  }
+ }
 
 .page-main__heading {
   .container-min();
@@ -12,7 +18,12 @@
     background-position: top center;
     background-repeat: no-repeat;
   }
+
+  &--inner {
+    margin-bottom: 30px;
+  }
 }
+
 
 .page-main__title {
   width: 250px;
@@ -34,12 +45,20 @@
   }
 }
 
+.page-main__catalog {
+  .container-min();
+}
+
 @media (min-width: @tablet-width) {
   .page-main__heading {
     .container-middle();
 
     &--index {
       background-image: url("../../img/hero-tablet@1x.jpg");
+    }
+
+    &--inner {
+      margin-bottom: 55px;
     }
   }
 
@@ -53,6 +72,10 @@
       padding-bottom: 365px;
     }
   }
+
+  .page-main__catalog {
+    .container-middle();
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -61,6 +84,10 @@
 
     &--index {
       background-image: url("../../img/hero-desktop@1x.jpg");
+    }
+
+    &--inner {
+      margin-bottom: 80px;
     }
   }
 
@@ -73,5 +100,9 @@
     &--index {
       padding-bottom: 350px;
     }
+  }
+
+  .page-main__catalog {
+    .container-max();
   }
 }
