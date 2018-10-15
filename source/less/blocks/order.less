@@ -1,6 +1,9 @@
-.order {
-  padding-top: 30px;
-  padding-bottom: 55px;
+.order__wrapper {
+  background-color: @bg-color;
+}
+
+.order__container {
+  .container-min();
 }
 
 .order__desc {
@@ -9,16 +12,20 @@
   line-height: 24px;
 }
 
-.order-form__fieldset {
+.order__fieldset {
   padding: 0;
   margin: 0;
+  margin-bottom: 40px;
   text-align: left;
   border: none;
 }
 
-.order-form__legend {
+.order__legend {
   margin-bottom: 30px;
+}
 
+.order__legend,
+.order__text {
   font-size: 17px;
   line-height: 16px;
   color: #63d1bb;
@@ -26,13 +33,11 @@
   text-transform: uppercase;
 }
 
-.order-form__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.order__list {
+  .reset-list();
 }
 
-.order-form__label {
+.order__label {
   display: block;
   font-size: 17px;
   line-height: 18px;
@@ -40,26 +45,24 @@
   font-weight: 700;
 
   &--radio {
-    padding: 12px 10px 12px 65px;
+    padding-left: 65px;
   }
 
   &--checkbox {
-    padding: 12px 10px 12px 65px;
+    padding-left: 65px;
   }
 
   &--name {
-    padding: 12px 10px 12px 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000000;
   }
 
   &--contact {
     margin-bottom: 30px;
-    line-height: 16px;
-    color: #63d1bb;
-    text-transform: uppercase;
   }
 }
 
-.order-form__input {
+.order__input {
   width: 100%;
   padding: 12px 10px 12px 0;
   font-size: 17px;
@@ -75,11 +78,202 @@
   }
 }
 
-.order-form__input::placeholder {
+.order__input::placeholder {
   color: rgba(68, 68, 68, 0.3);
 }
 
-.order-form__send {
+.order__item {
+  &--radio {
+    margin-bottom: 25px;
+  }
+
+  &--checkbox {
+    margin-bottom: 25px;
+  }
+}
+
+.order__remark {
+  margin-bottom: 30px;
+}
+
+.order__send {
   width: 100%;
-  box-sizing: border-box;
+  background-color: transparent;
+}
+
+@media (min-width: @tablet-width) {
+  .order__wrapper {
+    &--grey {
+      background-color: @bg-2;
+    }
+  }
+
+  .order__container {
+    .container-middle();
+  }
+
+  .order__desc {
+    margin: 0 0 10px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order__fieldset {
+    position: relative;
+    width: auto;
+    box-sizing: border-box;
+
+    &--type {
+      padding: 60px 0 40px 0;
+      margin: 0;
+    }
+
+    &--color {
+      padding: 60px 0 40px 0;
+      margin: 0;
+    }
+
+    &--name {
+      padding: 60px 0 40px 0;
+      margin: 0;
+    }
+
+    &--contact {
+      padding: 60px 0 40px 0;
+      margin: 0;
+    }
+
+    &--text {
+      padding: 60px 0 40px 0;
+      margin: 0;
+    }
+  }
+
+  .order__fieldset-wrapper {
+    padding: 0 25px 0 165px;
+  }
+
+  .order__legend {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    margin-bottom: 30px;
+  }
+
+  .order__list {
+    width: 500px;
+    display: flex;
+
+    &--radio {
+      flex-direction: column;
+      padding-left: 165px;
+    }
+
+    &--checkbox {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-left: 165px;
+    }
+  }
+
+  .order__item {
+    width: 250px;
+
+    &--radio {
+      margin-bottom: 50px;
+    }
+
+    &--checkbox {
+      margin-bottom: 25px;
+    }
+  }
+
+  .order__label {
+    display: block;
+    font-size: 19px;
+
+    &--contact {
+      position: relative;
+    }
+  }
+
+  .order__text {
+    position: absolute;
+    top: 15px;
+    left: -165px;
+  }
+
+  .order__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  .order__remark {
+    width: 330px;
+    order: 2;
+    text-align: end;
+  }
+
+  .order__send {
+    order: 1;
+    width: 230px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order__container {
+    .container-max();
+  }
+
+  .order__desc {
+    margin: 0 0 10px;
+  }
+
+  .order__fieldset {
+    &--type {
+      padding: 60px 0 40px 0;
+    }
+
+    &--color {
+      padding: 60px 0 40px 0;
+    }
+
+    &--name {
+      padding: 60px 0 40px 0;
+    }
+
+    &--contact {
+      padding: 60px 0 40px 0;
+    }
+
+    &--text {
+      padding: 60px 0 40px 0;
+    }
+  }
+
+  .order__fieldset-wrapper {
+    width: 775px;
+    padding: 0 25px 0 175px;
+    box-sizing: border-box;
+  }
+
+  .order__legend {
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .order__list {
+    width: 750px;
+    display: flex;
+
+    &--radio {
+      padding-left: 175px;
+    }
+
+    &--checkbox {
+      padding-left: 175px;
+    }
+  }
 }

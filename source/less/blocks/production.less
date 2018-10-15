@@ -2,9 +2,6 @@
   margin-bottom: 55px;
 }
 
-.production__video-player {
-}
-
 .production__img {
   display: block;
 }
@@ -12,12 +9,6 @@
 .production__title {
   padding: 25px 25px 25px 90px;
   margin: 0;
-
-  .mobil-card();
-
-  &--desk {
-    display: none;
-  }
 }
 
 .production__wrapper {
@@ -38,30 +29,26 @@
 
 @media (min-width: @tablet-width) {
   .production {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 45px;
     margin-bottom: 55px;
-    }
-
-  .production__video-player {
   }
 
   .production__wrapper {
-    padding: 45px 40px;
+    padding: 0 40px;
+  }
+
+  .production__video-player {
+    order: -1;
   }
 
   .production__title {
     margin-bottom: 34px;
-    padding: 0;
+    padding: 40px 40px 0 105px;
 
     font-size: 20px;
-
-    &--desk {
-    display: block;
   }
-
-    &--mobil {
-      display: none;
-    }
-}
 
   .production__text {
     margin-top: 0;
@@ -72,41 +59,43 @@
     line-height: 30px;
   }
 
-    .production__order {
+  .production__order {
     margin: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .production {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 45px;
+    position: relative;
+    align-items: flex-end;
+    padding-bottom: 0;
     margin-bottom: 55px;
-    }
+  }
 
   .production__video-player {
+    position: absolute;
     width: 682px;
     height: 455px;
+    top: 0;
+    left: 0;
+  }
+
+  .production__title {
+    width: 350px;
     margin: 0;
-}
+    padding: 100px 60px 0 55px;
+    margin-bottom: 40px;
+
+    box-sizing: border-box;
+  }
 
   .production__wrapper {
     display: flex;
     flex-wrap: wrap;
     width: 350px;
-    padding: 90px 55px 60px;
+    padding: 0 55px 60px;
     box-sizing: border-box;
   }
-
-  .production__title {
-    margin: 0;
-    padding: 0 30px 0 0;
-    margin-bottom: 40px;
-
-    font-size: 20px;
-}
-
 
   .production__text {
     width: 233px;
@@ -118,9 +107,8 @@
     line-height: 30px;
   }
 
-    .production__order {
-      width: 230px;
-    order: 4;
+  .production__order {
+    width: 230px;
     margin: 0;
   }
 }
