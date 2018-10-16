@@ -1,4 +1,6 @@
 .goods-week {
+  position: relative;
+  .container-min();
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -10,6 +12,7 @@
 .goods-week__title {
   margin: 0;
   margin-bottom: 5px;
+  .mobil-title();
 }
 
 .goods-week__promo {
@@ -20,9 +23,15 @@
   text-transform: uppercase;
 }
 
+.goods-week__description {
+  font-size: 15px;
+  line-height: 24px;
+}
+
 .goods-week__characteristic {
   width: 100%;
   margin-bottom: 25px;
+  font-size: 15px;
   line-height: 20px;
   border-collapse: collapse;
 }
@@ -32,7 +41,7 @@
 
   &--parameter {
     padding-right: 25px;
-    width: 98px;
+    min-width: 98px;
     box-sizing: border-box;
   }
 }
@@ -47,4 +56,84 @@
   font-weight: bold;
   line-height: 20px;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .goods-week {
+    .container-middle();
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .goods-week__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .goods-week__title {
+    width: 500px;
+    margin: 0;
+    .tablet-title();
+  }
+
+  .goods-week__promo {
+    width: 80px;
+    align-self: center;
+    text-align: center;
+    margin-right: 25px;
+  }
+
+  .goods-week__content {
+
+    width: 295px;
+  }
+
+  .goods-week__description {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .goods-week__wrapper-image {
+    position: absolute;
+    top: 120px;
+    right: 50px;
+    text-align: center;
+  }
+
+  .goods-week__price {
+    margin: 26px 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .goods-week {
+    .container-max();
+    padding-top: 130px;
+    padding-bottom: 80px;
+  }
+
+  .goods-week__header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-bottom: 60px;
+  }
+
+  .goods-week__title {
+    width: 530px;
+    margin: 0;
+    .desktop-title();
+  }
+
+  .goods-week__promo {
+    margin: 0 48px;
+  }
+
+  .goods-week__content {
+    width: 295px;
+    .container2;
+  }
 }

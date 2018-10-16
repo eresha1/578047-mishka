@@ -1,3 +1,20 @@
 .page-header {
   background-color: @bg-color;
 }
+
+.page-header__wrapper {
+  position: relative;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    .container-middle();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    .container-max();
+  }
+}
