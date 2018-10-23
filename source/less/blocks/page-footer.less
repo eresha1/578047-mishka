@@ -4,7 +4,7 @@
 
 .page-footer__wrapper {
   .container-min();
-  padding-top: 30px;
+  padding-top: 22px;
   padding-bottom: 20px;
 }
 
@@ -15,14 +15,32 @@
 @media (min-width: @tablet-width) {
   .page-footer__wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     .container-middle();
-    padding-top: 45px;
-    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 55px;
   }
 
   .page-footer__logo-link {
     display: block;
+    width: 33.3%;
+  }
+
+  .page-footer__logo-image {
+    width: 102px;
+    height: 34px;
+  }
+
+  .page-footer__social {
+    width: 33.3%;
+    align-self: flex-end;
+  }
+
+  .page-footer__copyright {
+    width: 33.3%;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
