@@ -1,23 +1,27 @@
 .goods-week {
-   position: relative;
-   .container-min();
-  padding-top: 27px;
+  position: relative;
+   padding-top: 27px;
   padding-bottom: 43px;
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 7px;
-      background-image: url(../../img/bg-zigzag-line.svg);
-      background-repeat: repeat-x;
-      background-position-x: -20px;
-      background-size: 320px 7px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 7px;
+    background-image: url(../../img/bg-zigzag-line.svg);
+    background-repeat: repeat-x;
+    background-position-x: -20px;
+    background-size: 320px 7px;
     }
 }
+
+.goods-week__container {
+  .container-min();
+}
+
 
 .goods-week__header {
   margin-bottom: 21px;
@@ -80,7 +84,7 @@
 @media (min-width: @tablet-width) {
   .goods-week {
    position: relative;
-   .container-middle();
+
     padding-top: 45px;
     padding-bottom: 67px;
 
@@ -88,6 +92,10 @@
       height: 17px;
       background-size: 768px 17px;
     }
+  }
+
+  .goods-week__container  {
+    .container-middle();
   }
 
   .goods-week__header {
@@ -152,7 +160,7 @@
 
 @media (min-width: @desktop-width) {
   .goods-week {
-    .container-max();
+
     padding-top: 124px;
     padding-bottom: 98px;
 
@@ -165,6 +173,9 @@
     }
   }
 
+  .goods-week__container  {
+    .container-max();
+  }
 
   .goods-week__header {
     display: flex;
