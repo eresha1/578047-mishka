@@ -169,21 +169,12 @@
 }
 
 .order__field {
-  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #000000;
 }
-
-.order__icon {
-  position: absolute;
-  width: 40px;
-  height: 100%;
-  top: 17px;
-  right: 0;
-  text-align: center;
-}
-
 
 .order__input {
-  width: 100%;
   padding: 15px 10px 16px 0;
   font-size: 17px;
   line-height: 18px;
@@ -197,21 +188,23 @@
   }
 
   &--name {
+    width: 260px;
     border-bottom: 2px solid #000000;
   }
 
   &--phone {
+    width: 220px;
     padding-top: 17px;
-    border-bottom: 2px solid #000000;
     font-size: 19px;
   }
 
   &--email {
+    width: 220px;
     padding-top: 23px;
-    border-bottom: 2px solid #000000;
   }
 
   &--text {
+    width: 260px;
     min-height: 142px;
     padding: 14px 17px;
     border: 2px solid #444444;
@@ -221,6 +214,33 @@
 .order__input::placeholder {
   color: rgba(68, 68, 68, 0.3);
 }
+
+  .order__icon {
+    position: relative;
+    width: 40px;
+
+    &--phone {
+      height: 55px;
+    }
+
+    &--phone svg {
+      top: 16px;
+      right: 7px;
+    }
+
+     &--email svg {
+      top: 16px;
+      right: 7px;
+    }
+
+    &--email {
+    height: 57px;
+    }
+  }
+
+  .order__icon svg {
+    position: absolute;
+  }
 
 .order__item {
   &--radio {
@@ -266,46 +286,42 @@
   }
 
   .order__desc {
-    margin: 0 0 10px;
+    margin: 0 auto 10px;
+    width: 668px;
     font-size: 17px;
     line-height: 30px;
   }
 
   .order__fieldset {
     position: relative;
-    width: auto;
+    width: 668px;
+    margin: 0 auto;
     box-sizing: border-box;
 
     &--type {
       padding: 60px 0 10px 0;
-      margin: 0;
+
     }
 
     &--color {
       padding: 60px 0 16px 0;
-      margin: 0;
     }
 
     &--name {
       padding: 50px 0 26px 0;
-      margin: 0;
     }
 
     &--contact {
       padding: 52px 0 24px 0;
-      margin: 0;
     }
 
     &--text {
       padding: 50px 0 52px 0;
-      margin: 0;
     }
   }
 
   .order__fieldset-wrapper {
     padding: 0 0 0 168px;
-    max-width: 815px;
-    box-sizing: border-box;
   }
 
   .order__legend {
@@ -358,6 +374,7 @@
     display: flex;
     flex-wrap: nowrap;
     margin-bottom: 24px;
+    width: 500px;
   }
 
   .order__label {
@@ -410,23 +427,46 @@
     }
   }
 
-  .order__icon {
-    top: 9px;
-    right: 19px;
-  }
-
   .order__input {
     font-size: 19px;
 
     &--name {
       padding-bottom: 13px;
       padding-left: 18px;
+      flex-grow: 1;
     }
 
     &--phone,
     &--email {
+      width: 440px;
       padding: 13px 10px 13px 15px;
       background-color: transparent;
+    }
+
+    &--text {
+      width: 500px;
+    }
+  }
+
+  .order__icon {
+        width: 60px;
+
+    &--phone {
+      height: 48px;
+    }
+
+    &--email {
+    height: 48px;
+    }
+
+     &--phone svg {
+      top: 10px;
+      right: 26px;
+    }
+
+     &--email svg {
+      top: 10px;
+      right: 26px;
     }
   }
 
@@ -443,7 +483,8 @@
   .order__bottom {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    width: 668px;
+    margin: 0 auto 50px;
   }
 
   .order__remark {
@@ -474,38 +515,38 @@
   }
 
   .order__fieldset {
+    margin: 0;
+
     &--type {
       padding: 60px 0 0 0;
-      margin-bottom: 9px;
     }
 
     &--color {
-      padding: 60px 0 40px 0;
+      padding: 60px 0 0 0;
     }
 
     &--name {
-      padding: 60px 0 40px 0;
+      padding: 50px 0 26px 0;
     }
 
     &--contact {
-      padding: 60px 0 40px 0;
+      padding: 52px 0 24px 0;
+      width: 875px;
     }
 
     &--text {
-      padding: 60px 0 40px 0;
+      padding: 50px 0 49px 0;
     }
   }
 
   .order__fieldset-wrapper {
-    width: 775px;
-    padding: 0 25px 0 175px;
-    box-sizing: border-box;
+    padding: 0 0 0 175px;
   }
 
   .order__legend {
     position: absolute;
-    top: 67px;
-    left: 59px;
+    top: 65px;
+    left: 60px;
   }
 
   .order__list {
@@ -514,10 +555,12 @@
 
     &--radio {
       padding-left: 175px;
+      padding-bottom: 9px;
     }
 
     &--checkbox {
       padding-left: 175px;
+      padding-bottom: 15px;
     }
   }
 
@@ -535,34 +578,89 @@
     }
   }
 
+  .order__label-wrapper {
+    padding-right: 49px;
+    width: 701px;
+  }
+
   .order__label {
 
-  &--radio {
-    padding-left: 82px;
-  }
-
-  &--radio::before {
-    top: -16px;
-    left: 1px;
+    &--radio {
+      padding-left: 82px;
     }
 
-    &--radio::after {
-    top: 0;
-    left: 17px;
+    &--radio::before {
+      top: -16px;
+      left: 1px;
+      }
+
+      &--radio::after {
+      top: 0;
+      left: 17px;
+      }
+
+      &--checkbox {
+      padding-left: 82px;
     }
 
-    &--checkbox {
-    padding-left: 82px;
+    &--checkbox::before {
+      top: -17px;
+      left: 1px;
+    }
+
+    &--checkbox::after {
+      top: -8px;
+      left: 8px;
+    }
   }
 
-  &--checkbox::before {
-    top: -17px;
-    left: 1px;
+
+  .order__field {
+    width: 700px;
   }
 
-  &--checkbox::after {
-    top: -8px;
-    left: 0px;
+   .order__input {
+
+    &--name {
+      padding-bottom: 13px;
+      padding-left: 18px;
+      flex-grow: 1;
+    }
+
+    &--phone,
+    &--email {
+      width: 640px;
+      padding: 13px 10px 13px 15px;
+      background-color: transparent;
+    }
+
+    &--text {
+      width: 700px;
+    }
   }
- }
+
+  .order__icon {
+        width: 60px;
+
+
+     &--phone svg {
+          top: 9px;
+          right: 6px;
+    }
+
+     &--email svg {
+      top: 9px;
+          right: 6px;
+    }
+  }
+
+  .order__text {
+    top: 17px;
+    left: -112px;
+  }
+
+  .order__bottom {
+    margin-bottom: 48px;
+    width: 700px;
+  }
 }
