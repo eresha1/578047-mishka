@@ -1,5 +1,5 @@
 .reviews {
-   position: relative;
+  position: relative;
   .container-min();
   padding-top: 25px;
   padding-bottom: 52px;
@@ -20,7 +20,6 @@
   margin: 0 0 28px;
   font-size: 15px;
   line-height: 30px;
-
 }
 
 .reviews__author-name {
@@ -31,20 +30,16 @@
   font-style: normal;
 }
 
-
 .reviews__nickname {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-top: 2px;
   font-size: 17px;
   line-height: 30px;
   color: #444444;
   font-style: normal;
   font-weight: 400;
 }
-
-.reviews__nickname {
-    display: inline-block;
-    vertical-align: bottom;
-    margin-top: 2px;
-  }
 
 .reviews__toggle {
   display: flex;
@@ -59,24 +54,33 @@
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid #ececec;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--prev {
-    background-image: url(../../img/icon-left-arrow.svg);
+    background-image: url("../../img/icon-left-arrow.svg");
   }
 
   &--next {
-    background-image: url(../../img/icon-right-arrow.svg);
+    background-image: url("../../img/icon-right-arrow.svg");
   }
 }
 
 @media (min-width: @tablet-width) {
   .reviews {
-   position: relative;
-   .container-middle();
+    position: relative;
+    .container-middle();
     padding-top: 80px;
     margin-bottom: 70px;
     height: 457px;
-    background-image: url(../../img/review@1x.jpg);
+    background-image: url("../../img/review@1x.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: contain;

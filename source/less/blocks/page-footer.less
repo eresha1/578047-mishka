@@ -21,14 +21,26 @@
     padding-bottom: 55px;
   }
 
-  .page-footer__logo-link {
-    display: block;
+  .page-footer__logo-wrapper {
     width: 33.3%;
   }
 
-  .page-footer__logo-image {
+  .page-footer__logo-link {
+    display: block;
     width: 102px;
     height: 34px;
+
+    &--static {
+      cursor: default;
+    }
+
+    &:not(&--static):hover path {
+      fill: #46c1ae;
+    }
+
+    &:not(&--static):active {
+      opacity: 0.3;
+    }
   }
 
   .page-footer__social {

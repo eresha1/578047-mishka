@@ -4,23 +4,22 @@
   margin-bottom: 39px;
 
   &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 7px;
-      background-image: url(../../img/bg-zigzag-line.svg);
-      background-repeat: repeat-x;
-      background-position-x: -20px;
-      background-size: 320px 7px;
-    }
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 7px;
+    background-image: url("../../img/bg-zigzag-line.svg");
+    background-position-x: -20px;
+    background-size: 320px 7px;
+  }
 }
 
 .contacts__wrapper {
   .container-min();
-   margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .contacts__title {
@@ -63,10 +62,18 @@
   max-width: 230px;
   margin-left: 0;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   & a {
     position: relative;
     color: inherit;
     text-decoration: none;
+  }
+
+  & a:hover {
+    color: #46c1ae;
   }
 
   & a::after {
@@ -126,7 +133,7 @@
       right: 53px;
       width: 47px;
       height: 81px;
-      background: url(../../img/icon-flag.svg);
+      background: url("../../img/icon-flag.svg");
       background-repeat: no-repeat;
       z-index: 1;
     }
@@ -187,7 +194,7 @@
     padding-top: 167px;
     margin-bottom: 105px;
 
-     &::after {
+    &::after {
       width: 1050px;
       margin: 0 auto;
       height: 29px;
@@ -199,7 +206,7 @@
   .contacts__wrapper {
     .container-max();
 
-     &::after {
+    &::after {
       top: -8px;
       left: 115px;
     }

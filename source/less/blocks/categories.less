@@ -43,7 +43,7 @@
     right: 35px;
     width: 41px;
     height: 63px;
-    background-image: url(../../img/icon-interior.svg);
+    background-image: url("../../img/icon-interior.svg");
   }
 
   &--toys::after {
@@ -51,7 +51,7 @@
     right: 25px;
     width: 60px;
     height: 60px;
-    background-image: url(../../img/icon-toy.svg);
+    background-image: url("../../img/icon-toy.svg");
   }
 }
 
@@ -76,10 +76,14 @@
 
   .categories__item {
     width: 50%;
+
+    &:hover {
+      top: -5px;
+    }
   }
 
-  .categories__link  {
-    padding: 27px 35px 32px;
+  .categories__link {
+    padding: 27px 35px 35px;
 
     font-size: 20px;
     line-height: 30px;
@@ -94,6 +98,10 @@
       top: 31px;
       right: 34px;
       width: 60px;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
