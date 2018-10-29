@@ -9,6 +9,8 @@
 .categories__item {
   width: 100%;
 
+  position: relative;
+
   &--interior {
     background-color: #63d1bb;
   }
@@ -20,7 +22,7 @@
 
 .categories__link {
   display: block;
-  padding: 30px 30px 30px;
+  padding: 25px 30px 30px;
 
   font-size: 19px;
   font-weight: 700;
@@ -28,6 +30,29 @@
   color: #ffffff;
 
   text-decoration: none;
+
+  &::after {
+    .pseudo();
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  &--interior::after {
+    top: 23px;
+    right: 35px;
+    width: 41px;
+    height: 63px;
+    background-image: url("../../img/icon-interior.svg");
+  }
+
+  &--toys::after {
+    top: 21px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../img/icon-toy.svg");
+  }
 }
 
 .categories__name {
@@ -39,6 +64,8 @@
 @media (min-width: @tablet-width) {
   .categories {
     .container-middle();
+    margin: 0 auto;
+    position: relative;
   }
 
   .categories__list {
@@ -49,8 +76,36 @@
 
   .categories__item {
     width: 50%;
+
+    &:hover {
+      top: -5px;
+    }
+  }
+
+  .categories__link {
+    padding: 27px 35px 35px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+
+    &--interior::after {
+      top: 30px;
+      right: 35px;
+    }
+
+    &--toys::after {
+      top: 31px;
+      right: 34px;
+      width: 60px;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
+
 
 @media (min-width: @desktop-width) {
   .categories {

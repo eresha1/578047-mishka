@@ -12,7 +12,15 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 29px;
+
+  &:hover .card__wrapper {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .card__wrapper {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .card__image {
@@ -28,42 +36,72 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 30px 28px;
-
+  padding: 27px 28px 28px;
+  border: 1px solid #ececec;
   box-sizing: border-box;
 }
 
 .card__title {
   width: 100%;
   margin-top: 0;
-  margin-bottom: 7px;
+  margin-bottom: 4px;
+  .mobil-card();
 }
 
 .card__title-link {
-  .mobil-card();
+  color: #000000;
   text-decoration: none;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .card__description {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 19px;
   .mobil-description();
 }
 
-.card__price {
-  width: 100%;
-  padding: 25px 25px 0 0;
-  .mobil-price();
+.card__buy {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 0 0 0;
+  border-top: 1px solid #ececec;
+
+  &--price {
+
+    width: 80px;
+    .mobil-price();
+  }
+
+  &--cart {
+    width: 21px;
+    height: 19px;
+  }
+
+  &--cart path {
+    fill: rgba(0, 0, 0, 0.2);
+  }
+
+  &--cart:hover path {
+    fill: #63d1bb;
+  }
+
+  &--cart:active path {
+    fill-opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .card__item {
     min-height: 335px;
-    margin-bottom: 55px;
-  }
-
-  .card__wrapper {
-    flex-grow: 1;
+    margin-bottom: 53px;
   }
 
   .card__image-link,
@@ -71,8 +109,17 @@
     width: 50%;
   }
 
+  .card__image {
+    width: 100%;
+    height: 334px;
+  }
+
+  .card__wrapper {
+    padding: 25px 26px 28px;
+  }
+
   .card__title {
-    margin-bottom: 20px;
+    margin-bottom: 4px;
   }
 
   .card__title-link {
@@ -84,16 +131,24 @@
     font-size: 15px;
   }
 
-  .card__price {
-    font-size: 17px;
+  .card__buy {
+    padding: 21px 5px 0 5px;
+
+    &--price {
+      width: 125px;
+      font-size: 17px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .card {
+    margin-bottom: 0;
+  }
+
   .card__list {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 55px;
   }
 
   .card__item {
@@ -112,7 +167,17 @@
     width: 100%;
   }
 
+  .card__wrapper {
+    min-height: 197px;
+    padding-bottom: 25px;
+  }
+
   .card__image-link {
+    height: 462px;
+  }
+
+  .card__image {
+    width: 316px;
     height: 462px;
   }
 
@@ -122,5 +187,10 @@
 
   .card__description {
     margin-bottom: auto;
+  }
+
+  .card__buy {
+    padding-left: 0;
+    padding-top: 23px;
   }
 }

@@ -1,11 +1,12 @@
 .features {
   .container-min();
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 26px;
 }
 
 .features__title {
   .mobil-title();
+  margin: 0;
+  margin-bottom: 33px;
 }
 
 .features__list {
@@ -18,8 +19,52 @@
 }
 
 .features__item {
-  padding: 55px 0 30px;
+  position: relative;
+  padding-top: 53px;
+  padding-bottom: 30px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 40px;
+    top: 0;
+    left: -3px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  &--1::before {
+    background-image: url("../../img/icon-feature-flower.svg");
+    background-position: 13px -1px;
+  }
+
+  &--2::before {
+    background-image: url("../../img/icon-feature-money.svg");
+    background-position: 5px 0;
+  }
+
+  &--3::before {
+    background-image: url("../../img/icon-feature-heart.svg");
+    background-position: 12px 5px;
+  }
+
+  &--4::before {
+    background-image: url("../../img/icon-feature-ball.svg");
+    background-position: 8px 1px;
+  }
+
+  &--5::before {
+    background-image: url("../../img/icon-feature-rocket.svg");
+    background-position: -1px 3px;
+  }
+
+  &--6::before {
+    background-image: url("../../img/icon-feature-gift.svg");
+    background-position: 6px 0;
+  }
 }
+
 
 .features__describe {
   width: 255px;
@@ -29,12 +74,13 @@
 @media (min-width: @tablet-width) {
   .features {
     .container-middle();
-    padding-top: 55px;
-    padding-bottom: 80px;
+    padding-top: 50px;
+    padding-bottom: 23px;
   }
 
   .features__title {
     .tablet-title();
+    margin-bottom: 48px;
   }
 
   .features__list {
@@ -47,7 +93,7 @@
 
   .features__item {
     width: 50%;
-    padding: 55px 0 30px;
+    padding-bottom: 59px;
   }
 
   .features__describe {
@@ -82,8 +128,8 @@
 @media (min-width: @desktop-width) {
   .features {
     .container-max();
-    padding-top: 55px;
-    padding-bottom: 80px;
+    padding-top: 58px;
+    padding-bottom: 29px;
   }
 
   .features__wrapper {
@@ -91,6 +137,18 @@
   }
 
   .features__title {
-    .tablet-title();
+    margin-bottom: 49px;
+    .desktop-title();
+  }
+
+  .features__list {
+    justify-content: flex-start;
+    width: 740px;
+  }
+
+  .features__item {
+    width: 250px;
+    padding-bottom: 59px;
+    margin-right: 100px;
   }
 }
