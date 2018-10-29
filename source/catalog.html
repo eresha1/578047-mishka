@@ -214,5 +214,28 @@
       </div>
     </div>
   </footer>
+  <section class="modal modal__size modal__size--show">
+    <div class="modal__wrapper">
+      <form class="modal__form cart-form" action="https://echo.htmlacademy.ru" method="post">
+        <h2 class="cart-form__title">Добавить в&nbsp;корзину</h2>
+        <p class="cart-form__desc">Выберите размер:</p>
+        <ul class="cart-form__list">
+          <li class="cart-form__item">
+            <input class="cart-form__input visually-hidden" id="field-s" type="checkbox" name="size-s" checked="checked">
+            <label class="cart-form__label" for="field-s">s</label>
+          </li>
+          <li class="cart-form__item">
+            <input class="cart-form__input visually-hidden" id="field-m" type="checkbox" name="size-m">
+            <label class="cart-form__label" for="field-m">m</label>
+          </li>
+          <li class="cart-form__item">
+            <input class="cart-form__input visually-hidden" id="field-l" type="checkbox" name="size-l">
+            <label class="cart-form__label" for="field-l">l</label>
+          </li>
+        </ul>
+        <button class="cart-form__add button" type="submit">Добавить</button>
+      </form>
+    </div>
+  </section>
 </body>
 </html>
