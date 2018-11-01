@@ -26,15 +26,19 @@
   }
 
   .page-footer__logo-link {
-    display: block;
+    display: flex;
+    justify-content: flex-start;
     width: 102px;
-    height: 34px;
 
     &--static {
       cursor: default;
     }
 
-    &:not(&--static):hover path {
+    & svg {
+      fill: #231F20;
+    }
+
+    &:hover svg {
       fill: #46c1ae;
     }
 
