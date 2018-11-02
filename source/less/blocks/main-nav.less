@@ -208,8 +208,7 @@
     }
 
     &--basket {
-      width: 264px;
-      text-align: end;
+      width: 261px;
       border-left: 1px solid #ececec;
     }
   }
@@ -227,6 +226,8 @@
     }
 
     &--basket {
+      display: flex;
+      justify-content: flex-end;
       padding: 31px 0 33px 50px;
     }
   }
@@ -281,7 +282,6 @@
   .main-nav__wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-between;
   }
 
   .main-nav__list {
@@ -291,6 +291,10 @@
     &--site {
       position: static;
       width: 420px;
+    }
+
+    &--user {
+      margin-left: auto;
     }
 
     &--hot {
@@ -312,6 +316,9 @@
       padding: 31px 0 33px;
     }
 
+    &--basket {
+
+    }
 
     &--hot {
       width: 165px;
