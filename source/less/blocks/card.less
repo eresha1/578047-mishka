@@ -78,25 +78,28 @@
   border-top: 1px solid #ececec;
 
   &--price {
-
     width: 80px;
     .mobil-price();
   }
 
   &--cart {
+    display: flex;
+    align-items: center;
     width: 21px;
     height: 19px;
   }
 
-  &--cart path {
+  &--cart svg {
+    position: static;
     fill: rgba(0, 0, 0, 0.2);
   }
 
-  &--cart:hover path {
+  &--cart:hover svg {
     fill: #63d1bb;
   }
 
-  &--cart:active path {
+  &--cart:active svg {
+    fill: #63d1bb;
     fill-opacity: 0.3;
   }
 }

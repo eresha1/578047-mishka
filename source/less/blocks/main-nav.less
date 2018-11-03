@@ -41,24 +41,27 @@
   display: block;
   background-color: #ffffff;
   border: none;
+  outline: none;
+  cursor: pointer;
 }
 
+.main-nav__toggle--closed {
+  &::before {
+    content: "";
 
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
+    position: absolute;
+    top: 10px;
+    right: 5px;
 
-  position: absolute;
-  top: 10px;
-  right: 5px;
+    width: 20px;
+    height: 2px;
 
-  width: 20px;
-  height: 2px;
-
-  background-color: #000000;
-  box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+    background-color: #000000;
+    box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+  }
 }
 
-.main-nav--opened .main-nav__toggle {
+.main-nav__toggle--opened {
   &::before,
   &::after {
     content: "";
@@ -82,8 +85,16 @@
   }
 }
 
-.main-nav__list {
+.main-nav__wrapper--closed {
   display: none;
+}
+
+.main-nav__wrapper--opened {
+  display: block;
+}
+
+.main-nav__list {
+  display: block;
   width: auto;
   .reset-list();
   margin-right: auto;
@@ -112,23 +123,18 @@
   }
 
   &:not(&--static):hover {
-    opacity: 0.6;
+    color: rgba(0, 0, 0, 0.6);
   }
 
   &:not(&--static):active {
     opacity: 0.3;
   }
 
-  & path {
-    fill: rgba(0, 0, 0, 0.2);
-  }
-
-  &:hover path,
-  &:active path {
+  &:hover .main-nav__link-icon,
+  &:active .main-nav__link-icon {
     fill: #63d1bb;
   }
 }
-
 
 .main-nav__link-wrapper {
   position: relative;
@@ -136,13 +142,13 @@
   margin: 0 auto;
 }
 
-
-.main-nav__link > svg {
+.main-nav__link-icon {
   position: absolute;
   width: 21px;
   height: 19px;
   top: 30px;
   left: 0;
+  fill: rgba(0, 0, 0, 0.2);
 }
 
 .main-nav__delivery {
@@ -170,6 +176,7 @@
   }
 
   .main-nav__wrapper {
+    display: block;
     width: 348px;
   }
 
@@ -213,8 +220,7 @@
     }
 
     &--basket {
-      width: 264px;
-      text-align: end;
+      width: 261px;
       border-left: 1px solid #ececec;
     }
   }
@@ -232,14 +238,16 @@
     }
 
     &--basket {
+      display: flex;
+      justify-content: flex-end;
       padding: 31px 0 33px 50px;
     }
   }
 
-  .main-nav__link > svg {
+  .main-nav__link-icon {
     position: absolute;
-    top: 33px;
-    left: 29px;
+    top: 35px;
+    left: 30px;
   }
 
   .main-nav__icon--search {
@@ -286,7 +294,6 @@
   .main-nav__wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-between;
   }
 
   .main-nav__list {
@@ -296,6 +303,10 @@
     &--site {
       position: static;
       width: 420px;
+    }
+
+    &--user {
+      margin-left: auto;
     }
 
     &--hot {
@@ -316,7 +327,6 @@
       width: 185px;
       padding: 31px 0 33px;
     }
-
 
     &--hot {
       width: 165px;
