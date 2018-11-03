@@ -1,3 +1,12 @@
+.cart-form {
+  .container-min();
+  padding-top: 30px;
+  padding-bottom: 45px;
+  background-color: @bg-color;
+  border: solid 1px #c6c6c6;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+}
+
 .cart-form__title {
   width: 165px;
   margin: 0 auto 20px;
@@ -60,6 +69,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .cart-form {
+    width: 566px;
+    padding: 50px 105px 45px;
+  }
+
   .cart-form__title {
     width: auto;
     margin-bottom: 20px;

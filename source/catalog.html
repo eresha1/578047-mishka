@@ -23,7 +23,7 @@
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-nav__wrapper main-nav__wrapper--closed">
+        <div class="main-nav__wrapper main-nav__wrapper--opened">
           <ul class="main-nav__list main-nav__list--site">
             <li class="main-nav__item main-nav__item--site">
               <a class="main-nav__link main-nav__link--site main-nav__link--static" href="#">Каталог товаров</a>
@@ -171,7 +171,7 @@
         </div>
         <div class="production__wrapper">
           <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="production__order button" href="#">Сделать заказ</a>
+          <a class="production__order button" href="form.html">Сделать заказ</a>
         </div>
       </section>
     </div>
@@ -211,8 +211,7 @@
       </div>
     </div>
   </footer>
-  <section class="modal modal__size modal__size--show">
-    <div class="modal__wrapper">
+  <section class="modal">
       <form class="modal__form cart-form" action="https://echo.htmlacademy.ru" method="post">
         <h2 class="cart-form__title">Добавить в&nbsp;корзину</h2>
         <p class="cart-form__desc">Выберите размер:</p>
@@ -232,9 +231,10 @@
         </ul>
         <button class="cart-form__add button" type="submit">Добавить</button>
       </form>
-    </div>
   </section>
+  <div class="modal__overlay"></div>
   <script src="js/menu.js"></script>
+  <script src="js/popup.js"></script>
   <script src="js/svg4everybody.js"></script>
   <script type="text/javascript" src="js/picturefill.js"></script>
 </body>

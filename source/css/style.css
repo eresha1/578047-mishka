@@ -100,6 +100,7 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .main-nav__toggle--closed::before {
   content: "";
@@ -2605,7 +2606,32 @@ input[type="radio"].visually-hidden {
   height: 34px;
   fill: #63d1bb;
 }
-.modal__wrapper {
+.modal {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 50;
+}
+.modal__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 40;
+}
+.modal--show {
+  display: block;
+}
+.modal__overlay--show {
+  display: block;
+}
+.cart-form {
   width: 320px;
   margin: 0 auto;
   padding: 0 30px;
@@ -2617,13 +2643,6 @@ input[type="radio"].visually-hidden {
   border: solid 1px #c6c6c6;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
           box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
-  margin-bottom: 50px;
-}
-@media (min-width: 768px) {
-  .modal__wrapper {
-    width: 566px;
-    padding: 50px 105px 45px;
-  }
 }
 .cart-form__title {
   width: 165px;
@@ -2685,6 +2704,10 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 @media (min-width: 768px) {
+  .cart-form {
+    width: 566px;
+    padding: 50px 105px 45px;
+  }
   .cart-form__title {
     width: auto;
     margin-bottom: 20px;

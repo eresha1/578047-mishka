@@ -1,17 +1,29 @@
-.modal__wrapper {
-  .container-min();
-  padding-top: 30px;
-  padding-bottom: 45px;
-  background-color: @bg-color;
-  border: solid 1px #c6c6c6;
-  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
-
-  margin-bottom: 50px;
+.modal {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 50;
 }
 
-@media (min-width: @tablet-width) {
-  .modal__wrapper {
-    width: 566px;
-    padding: 50px 105px 45px;
-  }
+.modal__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,.9);
+  z-index: 40;
 }
+
+.modal--show {
+  display: block;
+}
+
+.modal__overlay--show {
+  display: block;
+}
+
+
