@@ -16,3 +16,5 @@ navToggle.addEventListener('click', function (event) {
   navToggle.classList.toggle('main-nav__toggle--opened');
   });
 }
+
+svg4everybody();
