@@ -51,7 +51,7 @@ gulp.task("images", function () {
     imagemin.jpegtran({progressive: true}),
     imagemin.svgo()
     ]))
-   .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("webp", function () {

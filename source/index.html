@@ -208,7 +208,8 @@
           <img class="contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Местонахождение на карте">
         </picture>
       </div>
-      <div class="contacts__map-interactive"></div>
+      <div class="contacts__map-interactive" id="map">
+      </div>
       <div class="contacts__write-wrapper">
         <a class="contacts__write button" href="#">Напишите нам</a>
       </div>
@@ -250,7 +251,10 @@
     </div>
   </footer>
   <script src="js/svg4everybody.js"></script>
-  <script src="js/picturefill.js"></script>
+  <script src="js/picturefill.min.js"></script>
   <script src="js/index.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<b9a6953e-90d0-403a-8c87-6717d47aeea1>&lang=ru_RU"></script>
+  <!--<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init" async></script>_--->
+  <script src="js/map.js"></script>
 </body>
 </html>
