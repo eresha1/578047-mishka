@@ -21,5 +21,6 @@
       "rightMouseButtonMagnifier",
       "ruler",
       "routeEditor",
+      "scrollZoom",
       ]);
   }
