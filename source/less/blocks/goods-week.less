@@ -8,7 +8,6 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
     width: 100%;
     height: 7px;
     background-image: url("../../img/bg-zigzag-line.svg");
@@ -159,13 +158,13 @@
 
 @media (min-width: @desktop-width) {
   .goods-week {
-
     padding-top: 120px;
     padding-bottom: 98px;
 
     &::after {
       width: 1050px;
-      margin: 0 auto;
+      left: 50%;
+      margin-left: -525px;
       height: 29px;
       background-size: 1050px 29px;
       background-position-x: 22px;
