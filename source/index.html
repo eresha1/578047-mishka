@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
 </head>
 <body>
   <div style="display:none">
@@ -66,7 +68,7 @@
           </ul>
         </div>
       </nav>
-      <p class="main-nav__delivery">Бесплатная доставка по России
+      <p class="page-header__delivery">Бесплатная доставка по России
       </p>
     </div>
   </header>
@@ -81,12 +83,12 @@
         <h2 class="visually-hidden">Товары по категориям</h2>
         <ul class="categories__list">
           <li class="categories__item categories__item--interior">
-            <a class="categories__link categories__link--interior" href="#">
+            <a class="categories__link categories__link--interior" href="catalog.html">
               <span class="categories__name">Предметы интерьера</span>
             </a>
           </li>
           <li class="categories__item categories__item--toys">
-            <a class="categories__link categories__link--toys" href="#">
+            <a class="categories__link categories__link--toys" href="catalog.html">
               <span class="categories__name">Детские игрушки</span>
             </a>
           </li>
@@ -165,7 +167,7 @@
           <blockquote class="reviews__item">
             <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!
             </p>
-            <cite class="reviews__author-name">Анастасия Красильникова<br>
+            <cite class="reviews__author-name">Анастасия Красильникова
               <span class="reviews__nickname">@misssssiskras</span>
             </cite>
           </blockquote>
@@ -178,20 +180,20 @@
             <span class="visually-hidden">Следующий отзыв</span>
           </button>
         </div>
-        <a class="reviews__write button" href="#">Написать</a>
+        <a class="reviews__write button" href="comments.html">Написать</a>
       </div>
     </section>
     <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Контакты</h2>
         <dl class="contacts__info">
-          <div class="contacts__info--email">
+          <div class="contacts__info-email">
             <dt class="contacts__parameter">e-mail:</dt>
             <dd class="contacts__value">
               <a href="#">info@mimimishkashop.ru</a>
             </dd>
           </div>
-          <div class="contacts__info--address">
+          <div class="contacts__info-address">
             <dt class="contacts__parameter">адрес:</dt>
             <dd class="contacts__value">
               <p class="contacts__value-address">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101
@@ -213,7 +215,7 @@
       <div class="contacts__map-interactive" id="map">
       </div>
       <div class="contacts__write-wrapper">
-        <a class="contacts__write button" href="#">Напишите нам</a>
+        <a class="contacts__write button" href="contacts.html">Напишите нам</a>
       </div>
     </section>
   </main>
@@ -254,8 +256,33 @@
       </div>
     </div>
   </footer>
+  <section class="modal">
+    <div class="modal__wrapper">
+      <form class="modal__form cart-form" action="https://echo.htmlacademy.ru" method="post">
+        <h2 class="cart-form__title">Добавить в&nbsp;корзину</h2>
+        <p class="cart-form__desc">Выберите размер:</p>
+        <ul class="cart-form__list">
+          <li class="cart-form__item">
+            <input class="cart-form__input visually-hidden" id="field-s" type="checkbox" name="size-s" checked="checked">
+            <label class="cart-form__label" for="field-s">s</label>
+          </li>
+          <li class="cart-form__item">
+            <input class="cart-form__input visually-hidden" id="field-m" type="checkbox" name="size-m">
+            <label class="cart-form__label" for="field-m">m</label>
+          </li>
+          <li class="cart-form__item">
+            <input class="cart-form__input visually-hidden" id="field-l" type="checkbox" name="size-l">
+            <label class="cart-form__label" for="field-l">l</label>
+          </li>
+        </ul>
+        <button class="cart-form__add button" type="submit">Добавить</button>
+      </form>
+    </div>
+    <div class="modal__overlay"></div>
+  </section>
   <script src="js/svg4everybody.min.js"></script>
   <script src="js/picturefill.min.js"></script>
+  <script src="js/popup.min.js"></script>
   <script src="js/index.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init" async></script>
   <script src="js/map.min.js"></script>

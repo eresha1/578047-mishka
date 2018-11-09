@@ -25,7 +25,7 @@
   }
 
   &--name {
-    margin-bottom: 8px;
+    margin-bottom: 11px;
   }
 
   &--contact {
@@ -87,7 +87,7 @@
 }
 
 .order__label-wrapper {
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 }
 
 
@@ -175,9 +175,10 @@
 }
 
 .order__input {
+  min-height: 52px;
   position: relative;
   width: 260px;
-  padding: 14px 10px 17px 0;
+  padding: 15px 10px 15px 0;
   font-family: inherit;
   font-size: 17px;
   line-height: 18px;
@@ -268,8 +269,9 @@
 .order__send {
   width: 100%;
   background-color: transparent;
+  font-family: inherit;
+  font-size: 17px;
 }
-
 
 @media (min-width: @tablet-width) {
   .order__wrapper {
@@ -304,7 +306,7 @@
     }
 
     &--color {
-      padding: 60px 0 16px 0;
+      padding: 60px 0 13px 0;
     }
 
     &--name {
@@ -312,7 +314,7 @@
     }
 
     &--contact {
-      padding: 52px 0 24px 0;
+      padding: 50px 0 26px 0;
     }
 
     &--text {
@@ -322,8 +324,8 @@
 
   .order__legend {
     position: absolute;
-    top: 65px;
-    left: -165px;
+    top: 68px;
+    left: -168px;
     margin-bottom: 30px;
 
     &--color,
@@ -350,7 +352,8 @@
     &--checkbox {
       flex-direction: row;
       flex-wrap: wrap;
-      padding-left: 172px;
+      width: 500px;
+      padding-left: 167px;
       margin-bottom: 0;
     }
   }
@@ -362,12 +365,13 @@
     }
 
     &--checkbox {
-      margin-bottom: 14px;
-      width: 200px;
+      margin-bottom: 15px;
+      margin-right: 20px;
+      width: 240px;
     }
 
-    &--checkbox:nth-child(2n+1) {
-      margin-right: 62px;
+    &--checkbox:nth-child(2n) {
+      margin-right: 0;
     }
   }
 
@@ -401,19 +405,19 @@
     }
 
     &--checkbox {
-      padding-left: 75px;
+      padding-left: 80px;
     }
 
     &--checkbox::before {
       top: -17px;
-      left: -5px;
+      left: 0;
       width: 54px;
       height: 52px;
     }
 
     &--checkbox::after {
       top: -8px;
-      left: 2px;
+      left: 8px;
       width: 37px;
       height: 30px;
     }
@@ -424,7 +428,8 @@
 
     &--contact {
       position: relative;
-      margin-bottom: 26px;
+      width: 500px;
+      margin-bottom: 24px;
     }
   }
 
@@ -458,8 +463,8 @@
 
   .order__text {
     position: absolute;
-    top: 15px;
-    left: -165px;
+    top: 18px;
+    left: -167px;
 
     &::after {
       content: none;
@@ -508,20 +513,20 @@
     }
 
     &--color {
-      padding: 61px 0 0 0;
+      padding: 60px 0 0 0;
     }
 
     &--name {
-      padding: 50px 0 24px 0;
+      padding: 50px 0 26px 0;
     }
 
     &--contact {
-      padding: 52px 0 25px 0;
+      padding: 50px 0 26px 0;
       width: 875px;
     }
 
     &--text {
-      padding: 51px 0 47px 0;
+      padding: 50px 0 47px 0;
     }
   }
 
@@ -534,25 +539,29 @@
     top: 67px;
     left: -112px;
 
-    &--color,
-    &--type {
+    &--color {
       top: 69px;
       left: 58px;
+    }
+
+    &--type {
+      top: 66px;
+      left: 63px;
     }
   }
 
   .order__list {
-    width: 750px;
+    width: 875px;
     display: flex;
 
     &--radio {
       padding-left: 175px;
-      padding-bottom: 9px;
+      padding-bottom: 10px;
     }
 
     &--checkbox {
       padding-left: 175px;
-      padding-bottom: 15px;
+      padding-bottom: 13px;
     }
   }
 
@@ -561,8 +570,9 @@
       width: 350px;
     }
 
-    &--checkbox {
-      margin-right: 62px;
+    &--checkbox,
+    &--checkbox:nth-child(2n) {
+      margin-right: 23px;
     }
 
     &--checkbox:nth-child(3n) {
@@ -572,7 +582,7 @@
 
   .order__label-wrapper {
     padding-right: 49px;
-    width: 701px;
+    width: 700px;
   }
 
   .order__label {
@@ -605,6 +615,7 @@
     }
 
     &--contact {
+      width: 700px;
       margin-bottom: 24px;
     }
   }
@@ -639,7 +650,7 @@
   }
 
   .order__bottom {
-    margin-bottom: 48px;
+    margin-bottom: 50px;
     width: 700px;
   }
 

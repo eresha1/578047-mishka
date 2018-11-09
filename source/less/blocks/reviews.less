@@ -23,6 +23,7 @@
 }
 
 .reviews__author-name {
+  display: block;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
@@ -31,8 +32,6 @@
 }
 
 .reviews__nickname {
-  display: inline-block;
-  vertical-align: bottom;
   margin-top: 2px;
   font-size: 17px;
   line-height: 30px;
@@ -104,6 +103,7 @@
 
   .reviews__title {
     .tablet-title();
+    max-width: 1050px;
     margin-bottom: 0;
     order: 1;
   }
@@ -111,6 +111,7 @@
   .reviews__write {
     min-width: 175px;
     order: 2;
+    margin-left: auto;
   }
 
   .reviews__list {
@@ -142,6 +143,7 @@
   }
 
   .reviews__author-name {
+    width: 300px;
     font-size: 18px;
   }
 }
@@ -176,7 +178,7 @@
 
   .reviews__text {
     padding-right: 90px;
-    margin-bottom: 38px;
+    margin-bottom: 40px;
 
     font-size: 17px;
 
@@ -188,5 +190,9 @@
     width: 175px;
     bottom: 0;
     right: 0;
+  }
+
+  .reviews__author-name {
+    font-size: 17px;
   }
 }

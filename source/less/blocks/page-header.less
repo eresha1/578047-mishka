@@ -6,11 +6,29 @@
 .page-header__wrapper {
   position: relative;
   margin: 0 auto;
+  border-bottom: 1px solid #ececec;
+}
+
+.page-header__delivery {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .page-header__wrapper {
     .container-middle();
+  }
+
+  .page-header__delivery {
+    position: absolute;
+    display: block;
+    margin: 0;
+    flex-wrap: wrap;
+    max-width: 40%;
+    top: 120%;
+    right: 50px;
+    font-size: 15px;
+    line-height: 24px;
+    z-index: 1;
   }
 }
 
