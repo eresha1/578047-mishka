@@ -14,7 +14,7 @@
     });
 
     myMap.geoObjects.add(myPlacemark);
-    myMap.controls.add('zoomControl');
+    myMap.controls.add("zoomControl");
 
     myMap.behaviors.disable([
       "rightMouseButtonMagnifier",
