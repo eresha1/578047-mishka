@@ -9,11 +9,11 @@ if (navMain.classList.contains("main-nav__wrapper--opened")) {
 }
 
 if (navToggle) {
-navToggle.addEventListener("click", function (event) {
-  navMain.classList.toggle("main-nav__wrapper--opened");
-  navToggle.classList.toggle("main-nav__toggle--closed");
-  navMain.classList.toggle("main-nav__wrapper--closed");
-  navToggle.classList.toggle("main-nav__toggle--opened");
+  navToggle.addEventListener("click", function (event) {
+    navMain.classList.toggle("main-nav__wrapper--opened");
+    navToggle.classList.toggle("main-nav__toggle--closed");
+    navMain.classList.toggle("main-nav__wrapper--closed");
+    navToggle.classList.toggle("main-nav__toggle--opened");
   });
 }
 
