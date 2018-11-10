@@ -4,12 +4,12 @@ var overlay = document.querySelector(".modal__overlay");
 var orderButton = document.querySelector(".goods-week__order");
 
 if (orderButton) {
-    orderButton.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal__wrapper--show");
-      overlay.classList.add("modal__overlay--show");
-    });
-  }
+  orderButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("modal__wrapper--show");
+    overlay.classList.add("modal__overlay--show");
+  });
+}
 
 if (link !== null) {
   for (var i = 0; i < link.length; i++) {
