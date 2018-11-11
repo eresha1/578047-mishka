@@ -1,21 +1,22 @@
 .contacts {
   position: relative;
-  padding-top: 35px;
+  padding-top: 42px;
   margin-bottom: 39px;
 
   &::after {
     content: "";
     position: absolute;
-    top: -6px;
-    left: -5px;
-    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
     height: 7px;
+    top: 0;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-position-x: -20px;
+    background-repeat: repeat-x;
+    background-position-x: -8px;
     background-size: 320px 7px;
   }
 }
-
 
 .contacts__wrapper {
   .container-min();
@@ -120,13 +121,13 @@
   z-index: 20;
   width: 100%;
   height: 457px;
-  top: 307px;
+  top: 315px;
   left: 0;
 }
 
 .contacts__write-wrapper {
   .container-min();
-  margin-top: 38px;
+  margin-top: 39px;
 }
 
 
@@ -136,10 +137,9 @@
     margin-bottom: 57px;
 
     &::after {
-      top: 0;
-      left: 0;
       height: 17px;
       background-size: 768px 17px;
+      background-position-x: -20px;
     }
   }
 
@@ -214,7 +214,7 @@
     z-index: 20;
     height: 457px;
     width: 100%;
-    top: 319px;
+    top: 321px;
     left: 0;
   }
 
@@ -232,16 +232,15 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    padding-top: 167px;
+    padding-top: 163px;
     margin-bottom: 105px;
 
     &::after {
-      width: 1050px;
-      left: 50%;
-      margin-left: -525px;
-      height: 29px;
-      background-size: 1050px 29px;
-      background-position-x: 22px;
+      left: 50px;
+      right: 50px;
+      height: 23px;
+      background-size: 1050px 21px;
+      background-position-x: -25px;
     }
   }
 
@@ -274,7 +273,7 @@
 
   .contacts__wrapper-image {
     position: absolute;
-    top: 97px;
+    top: 93px;
     left: 50%;
     width: 525px;
 
@@ -294,13 +293,13 @@
     z-index: 20;
     width: 525px;
     height: 457px;
-    top: 97px;
+    top: 93px;
     left: 50%;
   }
 
   .contacts__write-wrapper {
     .container-max();
-    margin-top: 50px;
+    margin-top: 49px;
     padding-left: 226px;
   }
 

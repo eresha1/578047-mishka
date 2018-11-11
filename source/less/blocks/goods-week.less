@@ -1,18 +1,18 @@
 .goods-week {
   position: relative;
   padding-top: 27px;
-  padding-bottom: 43px;
+  padding-bottom: 42px;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+    bottom: 0;
     height: 7px;
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
-    background-position-x: -20px;
+    background-position-x: -8px;
     background-size: 320px 7px;
   }
 }
@@ -73,7 +73,7 @@
 }
 
 .goods-week__price {
-  margin: 20px 0 26px;
+  margin: 20px 0 25px;
   font-size: 17px;
   font-weight: bold;
   line-height: 24px;
@@ -93,6 +93,7 @@
     &::after {
       height: 17px;
       background-size: 768px 17px;
+      background-position-x: -20px;
     }
   }
 
@@ -163,15 +164,14 @@
 @media (min-width: @desktop-width) {
   .goods-week {
     padding-top: 120px;
-    padding-bottom: 98px;
+    padding-bottom: 97px;
 
     &::after {
-      width: 1050px;
-      left: 50%;
-      margin-left: -525px;
-      height: 29px;
-      background-size: 1050px 29px;
-      background-position-x: 22px;
+      left: 50px;
+      right: 50px;
+      height: 23px;
+      background-size: 1050px 21px;
+      background-position-x: -25px;
     }
   }
 
@@ -225,6 +225,6 @@
 
   .goods-week__price {
     margin-top: 0;
-    margin-bottom: 34px;
+    margin-bottom: 35px;
   }
 }
